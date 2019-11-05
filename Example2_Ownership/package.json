@@ -1,0 +1,33 @@
+{
+  "name": "supply-chain-E",
+  "version": "1.0.0",
+  "description": "This repository contains an [Ethereum](https://www.ethereum.org/) DApp to track items through a Supply Chain.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "pk <pkrasam@gmail.com> (https://ipfs.infura.io/ipfs/QmSXiR9Khm3yo1J67nUopvVBxFJ8YGN2fUGZ34Etr3m92x/)",
+  "license": "MIT",
+  "devDependencies": {
+    "lite-server": "2.4.0"
+  },
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "openzeppelin-solidity": "^2.4.0",
+    "truffle-assertions": "^0.8.2",
+    "truffle-hdwallet-provider": "^1.0.9"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hujens/EluxSC.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hujens/EluxSC/issues"
+  },
+  "homepage": "https://github.com/hujens/EluxSC#readme"
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Workflow</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Example Workflow</h1>
+        <hr>
+        <p style="text-align: center;">Demonstration on how to interact with a Solidity Smart Contract</p>
+    </div>
+
+    <div id="ftc-produce">
+        <h2>Add Roles</h2>
+        <div class="form-group">
+            Address
+            <br>
+            <input type="text" id="address" name="address" value=0x00000000000000000000000000000000000000><br>
+            <div class=button-div>
+                <button class="btn-add" id="button" type="button" data-id="6">Add Architect</button>
+                <button class="btn-add" id="button" type="button" data-id="7">Add Engineer</button>
+            </div>
+        </div>
+        <div class=form-break></div>
+
+        <h2>Item Overview</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc" name="upc" value=1><br>
+            <div class=button-div>
+                <button class="btn-fetch" id="button" type="button" data-id="5">Fetch Data</button>
+            </div>
+            <br>
+            <div>
+                <p>upc, ownerID, architectID, architectName</p>
+                <small id="ftc-fetchData1">
+                    <!-- Data1 will appear here from app.js -->
+                </small>
+                <p>objectState, engineerID, engineerName, data</p>
+                <small id="ftc-fetchData2">
+                    <!-- Data2 will appear here from app.js -->
+                </small>
+                <br>
+                <hr>
+            </div>
+        </div>
+        <div class=form-break></div>
+
+        <h2>Architect Operations</h2>
+        <div class="form-group">
+            Architect Name
+            <br>
+            <input type="text" id="architectName" name="architectName" value="Architect1"><br>
+            Engineer Ethereum Address
+            <br>
+            <input type="text" id="engineerID" name="engineerID" value="0x00000000000000000000000000000000000000"><br>
+            Engineer Name
+            <br>
+            <input type="text" id="engineerName" name="engineerName" value="Engineer1"><br>
+            <button class="btn-create" id="button" type="button" data-id="1">Step 1 - Create</button>
+            <br>
+        </div>
+        <div class=form-break></div>
+
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc3" name="upc3" value=1><br>
+            Check Correct Installation (true/false)
+            <br>
+            <input type="text" id="check" name="check" value="true" size="60"><br>
+            <button class="btn-check" id="button" type="button" data-id="3">Step 3 - Check</button>
+        </div>
+        <div class=form-break></div>
+
+        
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc4" name="upc4" value=1><br>
+            <button class="btn-execute" id="button" type="button" data-id="4">Step 4 - Execute Logic</button>
+        </div>
+        <div class=form-break></div>
+
+        <h2>Engineer Operations</h2>
+        <div class="form-group">
+            UPC
+            <br>
+            <input type="number" id="upc2" name="upc2" value=1><br>
+            Data to sumbit (String)
+            <br>
+            <input type="text" id="data" name="data" value="Example Data"><br>
+            <button class="btn-fill" id="button" type="button" data-id="2">Step 2 - Submit Data</button>
+        </div>
+        <div class=form-break></div>
+
+    <h2>Transaction History<span id="ftc-history"></span></h2>
+    <div>
+        <ul id="ftc-events">
+            <!-- Events will appear here from app.js -->
+        </ul>
+        <br>
+        <hr>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="js/web3.min.js"></script> -->
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
