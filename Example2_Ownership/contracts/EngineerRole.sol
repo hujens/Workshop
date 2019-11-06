@@ -11,7 +11,7 @@ contract EngineerRole {
   event EngineerAdded(address indexed account);
   event EngineerRemoved(address indexed account);
 
-  // Defining a struct 'customers' by inheriting from 'Roles' library, struct Role
+  // Defining a struct 'engineers' by inheriting from 'Roles' library, struct Role
   Roles.Role private engineers;
 
   // In the constructor make the address that deploys this contract the 1st customer
