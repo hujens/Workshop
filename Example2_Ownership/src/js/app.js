@@ -192,7 +192,7 @@ App = {
         });
     },
 
-    checkItem: function (event) {
+    checkObject: function (event) {
         event.preventDefault();
         //var processId = parseInt($(event.target).data('id'));
         console.log(
@@ -202,14 +202,14 @@ App = {
         );
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            return instance.checkItem(
+            return instance.checkObject(
                 App.upc3,
                 App.check,
                 {from: App.metamaskAccountID}
             );
         }).then(function(result) {
             $("#ftc-item").text(result);
-            console.log('checkItem',result);
+            console.log('checkObject',result);
         }).catch(function(err) {
             console.log(err.message);
         });
@@ -224,7 +224,7 @@ App = {
         );
 
         App.contracts.SupplyChain.deployed().then(function(instance) {
-            return instance.payItem(
+            return instance.executeLogic(
                 App.upc4,
                 {from: App.metamaskAccountID}
             );
