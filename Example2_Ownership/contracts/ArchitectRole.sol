@@ -3,13 +3,13 @@ pragma solidity ^0.5.0;
 // Import 'Roles' from OpenZeppelin:
 import "../node_modules/openzeppelin-solidity/contracts/access/Roles.sol";
 
-// Define a contract 'ContractorRole' to manage this role - add, remove, check
+// Define a contract 'ArchitectRole' to manage this role - add, remove, check
 contract ArchitectRole {
   using Roles for Roles.Role;
 
   // Events, one for Adding, and other for Removing
-  event ContractorAdded(address indexed account);
-  event ContractorRemoved(address indexed account);
+  event ArchitectAdded(address indexed account);
+  event ArchitectRemoved(address indexed account);
 
   // Defining a struct 'architects' by inheriting from 'Roles' library, struct Role
   Roles.Role private architects;
@@ -25,7 +25,7 @@ contract ArchitectRole {
     _;
   }
 
-  // Define a function 'isContractor' to check this role
+  // Define a function 'isArchitect' to check this role
   function isArchitect(address account) public view returns (bool) {
     return architects.has(account);
   }
@@ -43,12 +43,12 @@ contract ArchitectRole {
   // Define an internal function '_addArchitect' to add this role, called by 'addArchitect'
   function _addArchitect(address account) internal {
     architects.add(account);
-    emit ContractorAdded(account);
+    emit ArchitectAdded(account);
   }
 
   // Define an internal function '_removeArchitect' to remove this role, called by 'removeArchitect
   function _removeArchitect(address account) internal {
     architects.remove(account);
-    emit ContractorRemoved(account);
+    emit ArchitectRemoved(account);
   }
 }
