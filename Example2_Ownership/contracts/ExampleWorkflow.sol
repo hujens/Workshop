@@ -36,7 +36,7 @@ contract ExampleWorkflow is ArchitectRole, EngineerRole, Ownable {
     CheckPassed,  // 2
     CheckFailed,  // 3
     Executed // 4
-    }
+  }
 
   State constant defaultState = State.Created;
 

@@ -22,10 +22,15 @@ ERC721: A non-fungible token `TutorialERC721` representing a star with a name an
 
 ## Use Truffle to test and deploy contract
 
-Contract deployment and testing is done via [Truffle](https://truffleframework.com/). To install Truffle:
+Contract deployment and testing is done via [Truffle](https://truffleframework.com/). If you have not installed truffle:
 
 ```
 npm install -g truffle
+```
+
+If truffle is already installed:
+```
+npm install
 ```
 
 ## Deployment
